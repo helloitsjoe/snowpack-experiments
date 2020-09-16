@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "watch": "snowpack build --watch"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/helloitsjoe/snowpack-experiments/issues"
   },
-  "homepage": "https://github.com/helloitsjoe/snowpack-experiments#readme"
+  "homepage": "https://github.com/helloitsjoe/snowpack-experiments#readme",
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "snowpack": "^2.11.1"
+  }
 }
