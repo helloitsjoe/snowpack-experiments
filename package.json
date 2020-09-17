@@ -7,7 +7,8 @@
     "test": "jest",
     "start": "snowpack dev",
     "build": "snowpack build",
-    "watch": "snowpack build --watch"
+    "watch": "snowpack build --watch",
+    "docker-shell": "docker run -it -w /app -v $(pwd):/app -v snowpack-node_modules:/app/node_modules -p 8080:8080 node:12 /bin/bash"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,14 @@
   },
   "homepage": "https://github.com/helloitsjoe/snowpack-experiments#readme",
   "devDependencies": {
+    "@snowpack/plugin-babel": "^2.1.0",
+    "@testing-library/react": "^11.0.4",
+    "babel-react-simple": "^1.0.2",
     "jest": "^26.4.2",
     "snowpack": "^2.11.1"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
