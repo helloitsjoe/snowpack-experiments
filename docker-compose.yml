@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  shell:
+    image: node:12
+    working_dir: /app
+    command: /bin/bash
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+
+volumes:
+  node_modules:
